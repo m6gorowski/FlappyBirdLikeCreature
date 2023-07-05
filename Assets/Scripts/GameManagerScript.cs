@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Wall Spawning")]
+    [SerializeField] private GameObject _wallPrefab;
+    [SerializeField] private float _spawnTime;
+    [Header("Wall Spawning - the coordinates")]
+    [SerializeField] private float _Xspawn;
+    [SerializeField] private float _YspawnTop;
+    [SerializeField] private float _YspawnBottom;
     void Start()
     {
-        
+        StartCoroutine(SpawnWalls(_spawnTime));
     }
-
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    private IEnumerator SpawnWalls(float spawnTime)
+    {
+        while(true) { 
+            yield return new WaitForSeconds(spawnTime);
+            Instantiate(_wallPrefab, new Vector3(_Xspawn, Random.Range(_YspawnBottom, _YspawnTop)), Quaternion.identity);
+        }
     }
 }
