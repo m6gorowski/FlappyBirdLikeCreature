@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerScript : MonoBehaviour
+public class WallSpawnScript : MonoBehaviour
 {
     [Header("Wall Spawning")]
     [SerializeField] private GameObject _wallPrefab;
@@ -15,13 +15,10 @@ public class GameManagerScript : MonoBehaviour
     {
         StartCoroutine(SpawnWalls(_spawnTime));
     }
-    void Update()
-    {
-        
-    }
     private IEnumerator SpawnWalls(float spawnTime)
     {
-        while(true) { 
+        while (true)
+        {
             yield return new WaitForSeconds(spawnTime);
             Instantiate(_wallPrefab, new Vector3(_Xspawn, Random.Range(_YspawnBottom, _YspawnTop)), Quaternion.identity);
         }

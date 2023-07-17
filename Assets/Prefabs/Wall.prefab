@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 8219765016949334303}
   m_Layer: 0
   m_Name: Top wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 8219765017626318106}
   m_Layer: 0
   m_Name: Middle
-  m_TagString: Untagged
+  m_TagString: PointArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 8219765018344614784}
   m_Layer: 0
   m_Name: Bottom wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

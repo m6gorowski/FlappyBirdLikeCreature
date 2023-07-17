@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
+    public bool isPlayerAlive = true;
     public Rigidbody2D playerRigidbody { get; private set; }
     [SerializeField] private float _acceleration;
     [SerializeField] private float _jumpRotationPower;
@@ -15,11 +16,15 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+        if (isPlayerAlive)
         {
-            Jump();
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+            {
+                Jump();
+            }
+            transform.eulerAngles = new Vector3(0, 0, playerRigidbody.velocity.y * _jumpRotationPower);
+            return;
         }
-        transform.eulerAngles = new Vector3(0, 0, playerRigidbody.velocity.y * _jumpRotationPower);
     }
 
     private void Jump()

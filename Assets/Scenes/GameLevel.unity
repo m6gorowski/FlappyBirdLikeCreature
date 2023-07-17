@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1564009329
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.00000024537246, b: 0, a: 1}
   m_FlipX: 0
@@ -364,7 +364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1564009329
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: d6a27d0551f13c64aae87f949e6e6b32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -412,9 +412,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1083850286}
   - component: {fileID: 1083850287}
+  - component: {fileID: 1083850288}
   m_Layer: 0
   m_Name: Grass
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,6 +487,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1083850288
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083850285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1172890645
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,11 +522,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1172890646}
-  - component: {fileID: 1172890649}
   - component: {fileID: 1172890648}
+  - component: {fileID: 1172890649}
+  - component: {fileID: 1172890650}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,8 +582,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ce4e2918e94744e8e92db447a180a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerAlive: 1
   _acceleration: 8
   _jumpRotationPower: 5
+--- !u!114 &1172890650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172890645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb6a40f00ced1145b3f5f84af81a017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1469354298
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +638,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1469354298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3467709fc6e2ca54baff4e5019d21ba8, type: 3}
+  m_Script: {fileID: 11500000, guid: 875ba79eb9bc8f546a201c6224e8a26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _wallPrefab: {fileID: 8219765016666447450, guid: a4b609682c49de546a054fdbe56b9cf0, type: 3}
@@ -616,7 +657,7 @@ GameObject:
   - component: {fileID: 1846853057}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -630,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 1846853056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1083850286}
