@@ -9,6 +9,7 @@ public class PlayerMovementScript : MonoBehaviour
     public Rigidbody2D playerRigidbody { get; private set; }
     [SerializeField] private float _acceleration;
     [SerializeField] private float _jumpRotationPower;
+    [HideInInspector] public int points;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -30,5 +31,12 @@ public class PlayerMovementScript : MonoBehaviour
     private void Jump()
     {
         playerRigidbody.velocity = Vector2.up * _acceleration;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "PointArea")
+        {
+            points++;
+        }
     }
 }

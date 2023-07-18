@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PointManagementScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text pointsText { get; private set; }
+    public PlayerMovementScript playerMovementScript { get; private set; }
+
+    private void Start()
     {
-        
+        pointsText = this.transform.Find("Points").GetComponent<Text>();
+        playerMovementScript = GameObject.FindObjectOfType<PlayerMovementScript>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        pointsText.text = playerMovementScript.points.ToString();
     }
 }
