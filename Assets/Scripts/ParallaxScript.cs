@@ -6,15 +6,20 @@ public class ParallaxScript : MonoBehaviour
 {
     [SerializeField] private float _scrollSpeed = -2f;
     private float _singleTextureWidth;
+    public PlayerMovementScript playerMovementScript { get; private set; }
     void Start()
     {
         SetupTexture();
+        playerMovementScript = FindObjectOfType<PlayerMovementScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Scroll();
+        if (playerMovementScript.isPlayerAlive)
+        {
+            Scroll();
+        }        
         CheckReset();
     }
 
