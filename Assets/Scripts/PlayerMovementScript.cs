@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-    public bool isPlayerAlive = true;
+    public bool isPlayerAlive = false;
     public Rigidbody2D playerRigidbody { get; private set; }
     [SerializeField] private float _acceleration;
     [SerializeField] private float _jumpRotationPower;
@@ -13,6 +13,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        playerRigidbody.gravityScale = 0;
     }
 
     void Update()

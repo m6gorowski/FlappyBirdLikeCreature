@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1564009329
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.00000024537246, b: 0, a: 1}
   m_FlipX: 0
@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 1172890648}
   - component: {fileID: 1172890649}
   - component: {fileID: 1172890650}
+  - component: {fileID: 1172890651}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -582,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ce4e2918e94744e8e92db447a180a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerAlive: 1
+  isPlayerAlive: 0
   _acceleration: 8
   _jumpRotationPower: 5
   points: 0
@@ -598,7 +599,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb6a40f00ced1145b3f5f84af81a017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
+--- !u!95 &1172890651
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172890645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8152fdf9e07ead243b46fa1c8d602271, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1448522041
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469354299}
   - component: {fileID: 1469354300}
+  - component: {fileID: 1469354301}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -716,6 +737,18 @@ MonoBehaviour:
   _Xspawn: 5
   _YspawnTop: 2.4
   _YspawnBottom: -1.3
+--- !u!114 &1469354301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469354298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b296abecc78c1a64989f30f79d0568e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1622852257
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.30588236}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

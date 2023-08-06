@@ -6,16 +6,13 @@ public class WallSpawnScript : MonoBehaviour
 {
     [Header("Wall Spawning")]
     [SerializeField] private GameObject _wallPrefab;
-    [SerializeField] private float _spawnTime;
+    public float _spawnTime;
     [Header("Wall Spawning - the coordinates")]
     [SerializeField] private float _Xspawn;
     [SerializeField] private float _YspawnTop;
     [SerializeField] private float _YspawnBottom;
-    void Start()
-    {
-        StartCoroutine(SpawnWalls(_spawnTime));
-    }
-    private IEnumerator SpawnWalls(float spawnTime)
+
+    public IEnumerator SpawnWalls(float spawnTime)
     {
         while (true)
         {
