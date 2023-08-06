@@ -10,10 +10,13 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField] private float _acceleration;
     [SerializeField] private float _jumpRotationPower;
     [HideInInspector] public int points;
+
+    public AudioManagerScript audioManagerScript { get; private set; }
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerRigidbody.gravityScale = 0;
+        audioManagerScript = FindObjectOfType<AudioManagerScript>();
     }
 
     void Update()
@@ -32,11 +35,13 @@ public class PlayerMovementScript : MonoBehaviour
     private void Jump()
     {
         playerRigidbody.velocity = Vector2.up * _acceleration;
+        audioManagerScript.PlaySFX(audioManagerScript.jump);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "PointArea")
         {
+            audioManagerScript.PlaySFX(audioManagerScript.point);
             points++;
         }
     }
