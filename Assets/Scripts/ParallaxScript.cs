@@ -19,8 +19,8 @@ public class ParallaxScript : MonoBehaviour
         if (playerMovementScript.isPlayerAlive)
         {
             Scroll();
-        }        
-        CheckReset();
+            CheckReset();
+        }
     }
 
     void SetupTexture()

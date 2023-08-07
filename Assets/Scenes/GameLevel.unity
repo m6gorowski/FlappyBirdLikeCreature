@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ce4e2918e94744e8e92db447a180a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerAlive: 0
+  isPlayerAlive: 1
   _acceleration: 8
   _jumpRotationPower: 5
   points: 0
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallPrefab: {fileID: 8219765016666447450, guid: a4b609682c49de546a054fdbe56b9cf0, type: 3}
-  _spawnTime: 2
+  _spawnTime: 1.5
   _Xspawn: 5
   _YspawnTop: 2.4
   _YspawnBottom: -1.3

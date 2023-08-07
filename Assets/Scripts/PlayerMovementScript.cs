@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-    public bool isPlayerAlive = false;
+     public bool isPlayerAlive = true;
     public Rigidbody2D playerRigidbody { get; private set; }
     [SerializeField] private float _acceleration;
     [SerializeField] private float _jumpRotationPower;
