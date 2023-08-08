@@ -644,6 +644,7 @@ MonoBehaviour:
   _backgroundMusic: {fileID: 0}
   jump: {fileID: 8300000, guid: a38ab85ddc656c74db142fef632670b2, type: 3}
   point: {fileID: 8300000, guid: 64f2be56f0c6caf4a8c40e995b6e7edd, type: 3}
+  death: {fileID: 8300000, guid: 556e256ce2f28384c854a4b5b611cbdd, type: 3}
 --- !u!4 &605614836
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,7 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallPrefab: {fileID: 8219765016666447450, guid: a4b609682c49de546a054fdbe56b9cf0, type: 3}
-  _spawnTime: 1.8
+  _spawnTime: 1.9
   _Xspawn: 5
   _YspawnTop: 2.4
   _YspawnBottom: -1.3

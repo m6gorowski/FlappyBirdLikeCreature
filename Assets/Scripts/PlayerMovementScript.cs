@@ -39,7 +39,7 @@ public class PlayerMovementScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "PointArea")
+        if(collision.tag == "PointArea" && isPlayerAlive == true)
         {
             audioManagerScript.PlaySFX(audioManagerScript.point);
             points++;

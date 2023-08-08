@@ -12,6 +12,7 @@ public class AudioManagerScript : MonoBehaviour
     [SerializeField] private AudioClip _backgroundMusic;
     public AudioClip jump;
     public AudioClip point;
+    public AudioClip death;
 
     private void Start()
     {
