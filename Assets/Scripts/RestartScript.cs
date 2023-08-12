@@ -21,7 +21,7 @@ public class RestartScript : MonoBehaviour
     }
     private void Update()
     {
-        if((Input.GetMouseButtonDown(0) || Input.GetKeyDown("space")) && _canRestartByInput)
+        if((Input.GetMouseButtonUp(0) || Input.GetKeyUp("space")) && _canRestartByInput)
         {
             RestartGame();
         }
