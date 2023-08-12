@@ -9,6 +9,7 @@ public class gameStartScript : MonoBehaviour
 
     private bool isGameActive = false;
     IEnumerator wallSpawning;
+    [SerializeField] private GameObject _tutorialText;
     private void Start()
     {
         wallSpawnScript = GetComponent<WallSpawnScript>();
@@ -21,7 +22,7 @@ public class gameStartScript : MonoBehaviour
         if (!isGameActive && (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space")))
         {            
             StartCoroutine(wallSpawning);
-            //player.GetComponent<PlayerMovementScript>().isPlayerAlive = true;
+            _tutorialText.SetActive(false);
             player.GetComponent<PlayerMovementScript>().playerRigidbody.gravityScale = 2;
             player.GetComponent<Animator>().enabled = false;
             isGameActive = true;
