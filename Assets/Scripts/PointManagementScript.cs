@@ -7,7 +7,6 @@ public class PointManagementScript : MonoBehaviour
 {
     public Text pointsText { get; private set; }
     public PlayerMovementScript playerMovementScript { get; private set; }
-
     private void Start()
     {
         pointsText = this.transform.Find("Points").GetComponent<Text>();
