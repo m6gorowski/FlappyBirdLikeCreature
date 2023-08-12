@@ -1678,6 +1678,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tutorialText: {fileID: 1299420800}
   _pointsText: {fileID: 1999905231}
+  _backgroundImages:
+  - {fileID: 275192730}
+  - {fileID: 1769322512}
+  - {fileID: 758887649}
+  - {fileID: 1387315672}
+  - {fileID: 1594154481}
 --- !u!1 &1586145659
 GameObject:
   m_ObjectHideFlags: 0

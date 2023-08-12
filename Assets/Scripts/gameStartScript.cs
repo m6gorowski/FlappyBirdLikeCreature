@@ -11,11 +11,16 @@ public class gameStartScript : MonoBehaviour
     IEnumerator wallSpawning;
     [SerializeField] private GameObject _tutorialText;
     [SerializeField] private GameObject _pointsText;
+    [SerializeField] private GameObject[] _backgroundImages;
     private void Start()
     {
         wallSpawnScript = GetComponent<WallSpawnScript>();
         player = GameObject.Find("Player");
         wallSpawning = wallSpawnScript.SpawnWalls(wallSpawnScript._spawnTime);
+        for(int i = 0; i < _backgroundImages.Length; i++)
+        {
+            _backgroundImages[i].transform.position = new Vector2(Random.Range(-5.5f,0f),transform.position.y);
+        }
     }
     void Update()
     {
